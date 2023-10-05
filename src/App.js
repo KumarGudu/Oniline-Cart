@@ -21,14 +21,11 @@ const App = () => {
     setCart([...arr]);
   };
 
-  // useEffect(() => {
-  //   console.log("cart change");
-  // }, [cart]);
 
   return (
     <React.Fragment>
       <Navbar setShow={setShow} size={cart.length} />
-      {show ? (
+      {show? (
         <Amazon handleClick={handleClick} />
       ) : (
         <Cart cart={cart} setCart={setCart} handleChange={handleChange} />
